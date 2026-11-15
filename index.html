@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nonprofit Bookkeeping from $500/mo | Cayto Group</title>
+  <meta name="description" content="Clean, 990-ready books every month. Board-ready financials, grant tracking and restricted fund accounting for nonprofits, starting at $500 per month.">
+  <meta property="og:title" content="Nonprofit Bookkeeping from $500/mo | Cayto Group">
+  <meta property="og:description" content="Clean, 990-ready books every month. Board-ready financials and grant tracking for nonprofits.">
+  <meta property="og:image" content="assets/cayto-logo.png">
+  <meta name="theme-color" content="#000a48">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #249ebc;
+      --blue-dark: #1a7a94;
+      --navy: #000a48;
+      --navy-2: #0b2472;
+      --text: #4a5568;
+      --text-dark: #1a2d34;
+      --body: #f7f9fa;
+      --light: #eaf2f5;
+      --border: #c8d8de;
+      --white: #ffffff;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { color: var(--navy); line-height: 1.15; letter-spacing: -0.02em; }
+    a { color: inherit; }
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* Offer banner */
+    .banner {
+      position: sticky; top: 0; z-index: 50;
+      background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 45%, var(--blue) 100%);
+      color: var(--white);
+      box-shadow: 0 4px 18px rgba(0, 10, 72, 0.25);
+    }
+    .banner-inner {
+      display: flex; align-items: center; justify-content: center; gap: 14px 22px;
+      flex-wrap: wrap; padding: 14px 20px; text-align: center;
+    }
+    .banner-tag {
+      background: var(--white); color: var(--navy);
+      font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 5px 10px; border-radius: 999px;
+    }
+    .banner-text { font-size: 17px; font-weight: 600; }
+    .banner-text strong { font-weight: 800; }
+    .countdown {
+      display: inline-flex; align-items: baseline; gap: 6px;
+      background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.35);
+      padding: 6px 14px; border-radius: 10px; font-weight: 600; font-size: 15px;
+    }
+    .countdown .num { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+    /* Logo */
+    .brand { display: flex; justify-content: center; padding: 34px 20px 6px; }
+    .brand img { width: 210px; height: auto; display: block; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 22px 0 10px; }
+    .hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; max-width: 820px; margin: 0 auto; }
+    .hero h1 .accent { color: var(--blue); }
+    .hero .sub { font-size: clamp(17px, 2.2vw, 20px); max-width: 640px; margin: 18px auto 0; color: var(--text-dark); }
+
+    .booking {
+      max-width: 1000px; margin: 28px auto 0; background: var(--white);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      box-shadow: 0 10px 40px rgba(0, 10, 72, 0.08); overflow: hidden;
+    }
+    .calendly-inline-widget { min-width: 280px; height: 720px; }
+
+    /* Sections */
+    section.block { padding: 72px 0; }
+    .bg-body { background: var(--body); }
+    .bg-light { background: var(--light); }
+    .eyebrow {
+      display: block; text-align: center; color: var(--blue-dark);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .block h2 { text-align: center; font-size: clamp(28px, 4vw, 38px); font-weight: 800; margin-bottom: 40px; }
+
+    /* Testimonial */
+    .testimonial { padding: 64px 0 72px; }
+    .quote-card {
+      max-width: 820px; margin: 0 auto; background: var(--navy); color: var(--white);
+      border-radius: var(--radius); padding: 44px 40px; position: relative;
+    }
+    .quote-card::before {
+      content: "\201C"; position: absolute; top: -6px; left: 28px;
+      font-size: 120px; line-height: 1; color: var(--blue); font-family: Georgia, serif;
+    }
+    .quote-card blockquote { font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; font-weight: 500; position: relative; }
+    .quote-card .who { margin-top: 22px; font-size: 15px; color: #c9d6ff; }
+    .quote-card .who strong { color: var(--white); font-weight: 700; }
+
+    /* Cards */
+    .grid { display: grid; gap: 20px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 24px;
+    }
+    .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 15.5px; }
+    .card .bar { width: 36px; height: 4px; border-radius: 2px; background: var(--blue); margin-bottom: 16px; }
+    .tile { display: flex; gap: 14px; align-items: flex-start; }
+    .tile svg { flex: 0 0 26px; margin-top: 2px; }
+
+    /* FAQ */
+    .faq { max-width: 780px; margin: 0 auto; }
+    .faq details {
+      background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+      margin-bottom: 12px; overflow: hidden;
+    }
+    .faq summary {
+      cursor: pointer; list-style: none; padding: 20px 56px 20px 22px; position: relative;
+      font-weight: 700; color: var(--navy); font-size: 17px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%);
+      font-size: 24px; font-weight: 500; color: var(--blue);
+    }
+    .faq details[open] summary::after { content: "\2212"; }
+    .faq details p { padding: 0 22px 20px; font-size: 16px; }
+
+    /* Closing CTA */
+    .cta { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--white); padding: 72px 0 80px; text-align: center; }
+    .cta h2 { color: var(--white); font-size: clamp(30px, 4.6vw, 44px); font-weight: 800; }
+    .cta p { max-width: 620px; margin: 16px auto 0; font-size: 18px; color: #d9e2ff; }
+    .cta .countdown { margin-top: 22px; }
+    .cta .booking { border: none; margin-top: 34px; }
+
+    /* Footer */
+    footer { background: var(--white); border-top: 1px solid var(--border); padding: 26px 0; font-size: 14px; }
+    .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap; }
+    .foot nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    .foot a { text-decoration: none; color: var(--text); }
+    .foot a:hover { color: var(--blue-dark); }
+
+    @media (max-width: 900px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .grid-4, .grid-3 { grid-template-columns: 1fr; }
+      .banner-text { font-size: 15px; }
+      .brand img { width: 170px; }
+      section.block { padding: 56px 0; }
+      .quote-card { padding: 40px 24px 30px; }
+      .calendly-inline-widget { height: 1000px; }
+      .booking { border-radius: 0; border-left: none; border-right: none; }
+      .foot { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Year-end offer banner -->
+  <div class="banner" role="region" aria-label="Year-end offer">
+    <div class="banner-inner">
+      <span class="banner-tag">Year-end offer</span>
+      <span class="banner-text"><strong>50% off your first 6 months.</strong> Sign up by December 31, 2026.</span>
+      <span class="countdown" data-countdown hidden><span class="num">0</span><span class="label">days left</span></span>
+    </div>
+  </div>
+
+  <!-- Logo (not linked) -->
+  <div class="brand">
+    <img src="assets/cayto-logo.png" alt="Cayto Group LLC" width="520" height="287">
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="wrap">
+      <h1>Clean, <span class="accent">990-Ready</span> Books. Every Month.</h1>
+      <p class="sub">Board-ready financials, grant tracking and clean books starting as low as $500/mo.</p>
+    </div>
+    <div class="booking" id="book">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mikehenzgen/caytogroup?hide_gdpr_banner=1&primary_color=249ebc"></div>
+    </div>
+  </header>
+
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="wrap">
+      <figure class="quote-card">
+        <blockquote>Working with the Cayto team on our bookkeeping has been a great experience. They've brought a high level of diligence and accuracy to our accounting and finance processes. They have been instrumental in helping the Foundation move toward both our near-term and long-term goals.</blockquote>
+        <figcaption class="who"><strong>David Scarbeary</strong>, fCFO, Struggle of Love Foundation</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Books You Can Trust -->
+  <section class="block bg-body">
+    <div class="wrap">
+      <span class="eyebrow">Why Cayto</span>
+      <h2>Books You Can Trust</h2>
+      <div class="grid grid-4">
+        <div class="card"><div class="bar"></div><h3>Accurate, Every Time.</h3><p>An accountant reviews every entry before it reaches your statements.</p></div>
+        <div class="card"><div class="bar"></div><h3>Someone Who Picks Up.</h3><p>One dedicated contact who knows your organization. No ticket queues.</p></div>
+        <div class="card"><div class="bar"></div><h3>Reports Your Board Understands.</h3><p>Clear statements plus budget vs actual, delivered every month.</p></div>
+        <div class="card"><div class="bar"></div><h3>Ready for Your CPA &amp; Auditor.</h3><p>Clean, organized books at year-end. No scramble before the audit or 990.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built Around What You Need -->
+  <section class="block bg-light">
+    <div class="wrap">
+      <span class="eyebrow">What's included</span>
+      <h2>Built Around What You Need</h2>
+      <div class="grid grid-3">
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Restricted Funds</h3><p>Donor restrictions tracked and released correctly.</p></div>
+        </div>
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Grant Tracking</h3><p>Spending tied to each grant, ready for funder reports.</p></div>
+        </div>
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Budget vs Actual</h3><p>Monthly variance reporting for your board and finance committee.</p></div>
+        </div>
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Reconciliations</h3><p>Bank and card accounts matched to your books every month.</p></div>
+        </div>
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Bills and Donations</h3><p>Bills entered for your approval, and gifts recorded properly.</p></div>
+        </div>
+        <div class="card tile">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#249ebc"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Financial Statements</h3><p>Statements of activities, financial position and functional expenses.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block bg-body">
+    <div class="wrap">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Our books are behind. Can you still help?</summary>
+          <p>Yes. We quote catch-up work as a separate fixed project, so there are no surprises, and your monthly service starts alongside it. We bring you current, then keep you there.</p>
+        </details>
+        <details>
+          <summary>How hard is it to switch from our current bookkeeper?</summary>
+          <p>We handle the switch for you. We bring over your history and set everything up at no cost, so there's no data entry on your end. Usually all we need from your current bookkeeper is access to your records.</p>
+        </details>
+        <details>
+          <summary>Do you replace our CPA or auditor?</summary>
+          <p>No, we work alongside them. We keep your books audit-ready and prepare the reports and schedules they ask for, so year-end goes more smoothly. If you need help with your 990, we can arrange that too.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <h2>Lock in 50% off before December 31.</h2>
+      <p>Sign up by year-end and your first six months are half price. Book a 20-minute call and we'll quote a fixed monthly price for your organization.</p>
+      <span class="countdown" data-countdown hidden><span class="num">0</span><span class="label">days left</span></span>
+    </div>
+    <div class="booking">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/mikehenzgen/caytogroup?hide_gdpr_banner=1&primary_color=249ebc"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap foot">
+      <span>&copy; 2026 Cayto Group LLC</span>
+      <nav aria-label="Footer">
+        <a href="mailto:info@caytogroup.com">info@caytogroup.com</a>
+        <a href="https://caytogroup.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://caytogroup.com/terms-conditions" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    // Countdown in whole days to the end of Dec 31, 2026 (Mountain Time).
+    (function () {
+      var deadline = new Date("2026-12-31T23:59:59-07:00").getTime();
+      function render() {
+        var msLeft = deadline - Date.now();
+        var els = document.querySelectorAll("[data-countdown]");
+        els.forEach(function (el) {
+          if (msLeft <= 0) { el.hidden = true; return; }
+          var days = Math.ceil(msLeft / 86400000);
+          el.querySelector(".num").textContent = days === 1 ? "" : days;
+          el.querySelector(".label").textContent = days === 1 ? "Last day!" : "days left";
+          el.hidden = false;
+        });
+        if (msLeft <= 0) {
+          var b = document.querySelector(".banner");
+          if (b) b.hidden = true;
+        }
+      }
+      render();
+      setInterval(render, 60000);
+    })();
+
+    // Booking conversion hook: Calendly posts an event when a call is booked.
+    // Pushed to the dataLayer so Google Tag Manager can fire the Google Ads conversion.
+    window.dataLayer = window.dataLayer || [];
+    window.addEventListener("message", function (e) {
+      if (e.origin !== "https://calendly.com") return;
+      var ev = e.data && e.data.event;
+      if (ev === "calendly.event_scheduled") {
+        window.dataLayer.push({ event: "calendly_booking" });
+      }
+    });
+  </script>
+</body>
+</html>
